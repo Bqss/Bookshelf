@@ -73,7 +73,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const markTrigger = document.querySelectorAll('.books .btn-read');
         markTrigger.forEach(e => {
             e.onclick = (event) => {
-
                 const id  = event.target.parentElement.parentElement.id;
                 console.log(id);
                 const bookindex = books.findIndex(e => e.id == id);
@@ -130,16 +129,16 @@ const displayBooks = (bookss) => {
         btnDelete.forEach(e => {
             e.onclick = (event) => {
                 const id = event.target.parentElement.parentElement.id;
-                books = filterBook(e => e.id != id);
-                update();
-                if(isSearch) {
-                    searchResult = searchResult.filter(e=> e.id != id);
-                    displayBooks(searchResult)
-                }else {
-                    displayBooks(books)
-                } 
-                
-                
+                if(confirm('apakah anda yakin untuk menghapus buku ? ')){
+                    books = filterBook(e => e.id != id);
+                    update();
+                    if(isSearch) {
+                        searchResult = searchResult.filter(e=> e.id != id);
+                        displayBooks(searchResult)
+                    }else {
+                        displayBooks(books)
+                    } 
+                }
             }
         });
 
