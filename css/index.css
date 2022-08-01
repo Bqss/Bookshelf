@@ -32,8 +32,6 @@ body {
 .btn-primary {
   background-color: black;
   color: white;
-  position: absolute;
-  right: 4em;
 }
 
 .btn-primary:hover{
