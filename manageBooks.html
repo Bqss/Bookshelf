@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="Utr-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <title>Document</title>
+
+  </head>
+  <body>
+    <header class="bg-white shadow">
+      <div class="header-container flx sb">
+        <h2 class="logo">BookSelf</h2>
+        <nav class="navbar bg-primary flx-al-c">
+          <ul class="flx">
+            <li><a href="index.html" > Dashboard</a></li>
+            <li><a href="manageBooks.html" class="active">Manage Books</a></li>
+            <li><a href="readBook.html">Read Book</a></li>
+            <li><a href="">About Creator</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="container bg-white shadow">
+        <div class="section-header">
+          <h2 class="title">Manage Book</h2>
+        </div>
+        <div class="flx-al-c sb wrap gap1">
+          <input type="text" id="searchBook" value="" placeholder="Search...."/>
+          <div class="sort">
+            <label for="sort">Sort BY : </label>
+            <select name="" id="sort">
+              <option value="Name">Name</option>
+              <option value="Publish Date">Publish Date</option>
+            </select> 
+            <button class="btn btn-primary  btn-manage" id="btn-addBook">Add Book</button>
+          </div>
+        </div>
+      </section>
+      <section class="container bg-white shadow">
+        <div class="section-header">
+          <h3>List of books</h2>
+        </div>
+        <div class="books" id="booksManage">
+          
+        </div>
+      </section>
+      <section class="add-book" style="display:none;">
+        <form id="add-book">
+          <divs class="close flx">x</divs>
+          <p>Book's Title : </p>
+          <input type="text" id="tfBookTitle" placeholder="book title ......" required  >
+          <p>Author Name : </p>
+          <input type="text" id="tfAuthor" placeholder="author name ......" required>
+          <p>Publish Date : </p>
+          <input type="number" id="year" required >
+          <input type="checkbox" name="" id="IsReaded">
+          <label for="IsReaded">Mark as readed</label>
+          
+          <input type="submit" value="submit" class="btn-secondary btn">
+        </fo>
+      </section>
+    </main>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <header class="bg-white shadow">
+        <div class="header-container flx sb">
+          <h2 class="logo">BookSelf</h2>
+          <nav class="navbar bg-primary flx-al-c">
+            <ul class="flx">
+                <li><a href="index.html" > Dashboard</a></li>
+                <li><a href="manageBooks.html">Manage Books</a></li>
+                <li><a href="readBook.html" class="active">Read Book</a></li>
+                <li><a href="">About Creator</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+  
+      <main>
+        <section class="container bg-white shadow">
+          <div class="section-header flex sb">
+            <h2 class="title">Read Book</h2>
+          </div>
+          <div class="flx-al-c sb wrap gap1">
+            <input type="text" id="searchBook" value="" placeholder="Search...."/>
+            <div class="sort">
+              <label for="sort">Sort BY : </label>
+              <select name="" id="sort">
+                <option value="Name">Name</option>
+                <option value="Publish Date">Publish Date</option>
+                <option value="">Status</option>
+              </select>
+            </div>
+          </div>
+        </section>
+        <section class="container bg-white shadow">
+          <div class="section header">
+            <h3 class="title">List Of Unreaded Books</h3>
+          </div>
+          <div class="books" id="uunreadedBooks">
+          
+          </div>
+        </section>
+        <section class="container bg-white shadow">
+          <div class="section header">
+            <h3 class="title">List Of Readed Books</h3>
+          </div>
+          <div class="books" id="readedBooks">
+          
+          </div>
+        </section>
+      </main>
+      <script src="./js/main.js"></script>
+</body>
+</html>
